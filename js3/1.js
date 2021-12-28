@@ -5,7 +5,12 @@
  */
 
 const solution = (arr, obj) => {
-  return []
+  return arr.reduce((values, e) => {
+    if((obj.hasOwnProperty(e))){
+      values.push(obj[e])
+    }
+    return values
+  },[])
 }
 
 module.exports = {
